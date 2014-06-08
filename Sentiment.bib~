@@ -1,0 +1,59 @@
+
+Encoding: ISO-8859-1
+
+@article{Pang:2008:OMS:1454711.1454712,
+ author = {Pang, Bo and Lee, Lillian},
+ title = {Opinion Mining and Sentiment Analysis},
+ journal = {Found. Trends Inf. Retr.},
+ issue_date = {January 2008},
+ volume = {2},
+ number = {1-2},
+ month = jan,
+ year = {2008},
+ issn = {1554-0669},
+ pages = {1--135},
+ numpages = {135},
+ url = {http://dx.doi.org/10.1561/1500000011},
+ doi = {10.1561/1500000011},
+ acmid = {1454712},
+ publisher = {Now Publishers Inc.},
+ address = {Hanover, MA, USA},
+} 
+
+@article{Taboada:2011:LMS:2000517.2000518,
+ author = {Taboada, Maite and Brooke, Julian and Tofiloski, Milan and Voll, Kimberly and Stede, Manfred},
+ title = {Lexicon-based Methods for Sentiment Analysis},
+ journal = {Comput. Linguist.},
+ issue_date = {June 2011},
+ volume = {37},
+ number = {2},
+ month = jun,
+ year = {2011},
+ issn = {0891-2017},
+ pages = {267--307},
+ numpages = {41},
+ url = {http://dx.doi.org/10.1162/COLI_a_00049},
+ doi = {10.1162/COLI_a_00049},
+ acmid = {2000518},
+ publisher = {MIT Press},
+ address = {Cambridge, MA, USA},
+} 
+
+@inproceedings{Classification:2012,
+    author =  {Grabner ,Dietmar and Zanker, Markus and Fliedl, Gunther and Fuchs, Matthias },
+    title = {Classification of Customer Reviews based on Sentiment Analysis},
+    year = {2012},
+    booktitle = {Proceedings of 19th Conference on Information and Communication Technologies in Tourism},
+    address = {Helsingborg, Sweden},
+}
+
+
+@inproceedings{Twitter Sentiment:2011,
+    author =  {Efthymios ,Kouloumpis and Theresa, Johanna and Moore, Gunther},
+    title = {Twitter Sentiment Analysis:The Good the Bad and the OMG!},
+    year = {2011},
+    booktitle = {Proceedings of the Fifth International AAAI Conference on Weblogs and Social Media},
+    address = {Barcelona, Spain},
+}
+
+

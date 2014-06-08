@@ -1,0 +1,6996 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+ \usepackage{multicol}
+\date{}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip 10bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+Social Media Analytics Technical Report 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+center 
+\backslash
+textbf{Mahmoud Nabil}
+\backslash
+
+\backslash
+Computer Engineering 
+\backslash
+
+\backslash
+Cairo University
+\backslash
+
+\backslash
+Giza,Egypt
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+center 
+\backslash
+textbf{Mohamed Aly}
+\backslash
+
+\backslash
+Computer Engineering 
+\backslash
+
+\backslash
+Cairo University
+\backslash
+
+\backslash
+Giza,Egypt
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+center 
+\backslash
+textbf{Amir Atiya}
+\backslash
+
+\backslash
+Computer Engineering 
+\backslash
+
+\backslash
+Cairo University
+\backslash
+
+\backslash
+Giza,Egypt
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Millions of posts and reviews are posted every day on the social media websites
+ where people share all kinds of information such as political opinions,
+ product feedback, movies reviews, and other text that conveys the sentiment
+ of the user.
+ These online opinions have a great influence on our own decisions when
+ we plan to buy a product, travel abroad or even read a book.
+ This is because these activities consume our worthy resources in terms
+ of time and money.
+ This calls for tools to mine social data streams and extract useful information
+ out of it.
+ Towards this end, we propose the use of natural language processing technology
+ to analyze Arabic language data streams from social media websites.
+ The goal is to interpret what people are discussing and what is the general
+ mood about these topics.
+\end_layout
+
+\begin_layout Abstract
+The system is designed to analyze Arabic language data streams from social
+ media and extract useful information such as what topics are people discussing,
+ which topics are of most interest, and what are people's sentiment about
+ these topics in terms of approval or disapproval.
+ For now we will focus on Twitter feeds.
+ This tool will help in the market of social media analytics.
+ This market grows considerably, and it now has many applications such as
+ public mood tracking for the purposes of homeland security, gauging potential
+ customers, marketing applications, and consumer confidence estimation for
+ the purpose of assessing the economy.
+ It will also help build a base of expertise for Arabic NLP technologies
+ in Egypt.
+ We will also collect and annotate a dataset for Arabic language subjectivity
+ and sentiment analysis, that is annotated at the sentence level for subjectivit
+y and sentiment polarity.
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Opinion mining is gaining a large attention nowadays.
+ By means of social networks any one can share opinions or ideas with his
+ peers in no time, making activities like shopping on-line, reading a book,
+ watching a movie, or estimating the popularity of a public figure be influenced
+ other people's sentiments towards these entities.
+ Also the last decade witnessed an explosion in the number of social media
+ platforms and the number of people using them.
+ The most notable examples are Facebook, Twitter, and YouTube, where people
+ can post their comments, videos, and opinions about a wide variety of topics.
+ The power of social media was most visible in the revolutions of the so-called
+ Arab Spring.
+ Protesters in Tunisia, Egypt, Yemen, Syria, and Libya used social media
+ to their advantage to organize protests and share information and evade
+ the regimes' crackdown.
+ This also sparked an interest in social media analytics, the goal of which
+ has been the analysis of these data feeds on social media websites, and
+ the organization and extraction of useful information.
+\end_layout
+
+\begin_layout Standard
+Opinion mining is the science of extracting emotions and opinions from raw
+ text reviews.
+ It can be categorized to sentiment classification and feature-based opinion
+ mining 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "petz2012text"
+
+\end_inset
+
+.
+ The goal of sentiment classification is to analyze the sentiment (positive,
+ negative, and neutral ) towards the main entity of the sentence.
+ In feature-based opinion mining the goal is to identify the main entity
+ in the review or analyze the attitude towards a certain aspect of the review.
+ 
+\end_layout
+
+\begin_layout Standard
+A lot of work has been proposed that target most of the challenging aspects
+ of the sentiment analysis task, 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "maynard2012challenges"
+
+\end_inset
+
+ discuss some of these challenges.
+ These challenges are the same for most languages with some specific challenges
+ to other languages.
+\end_layout
+
+\begin_layout Standard
+Most of the work done in sentiment analysis and the data sets gathered targets
+ English language with very little work on Arabic.
+ One of the reasons is the prevalence of the English websites where 55%
+ of the visited websites on the Internet use English while only 3% uses
+ Arabic
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Languages used on the Internet"
+target "http://en.wikipedia.org/wiki/Languages_used_on_the_Internet"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ We capitalize on our expertise in machine learning, and our knowledge of
+ the Arabic language (together with the countrywide resources on the Arabic
+ language).
+ This latter gives us a competitive advantage over other data mining companies
+ abroad.
+ Arabic language NLP products are in high demand because of the large consumer
+ base of Arabic countries, and their large share of internet usage.
+ The other outcome of this project is to train a teaching assistant.
+ This would be one more step towards building an Arabic language NLP expertise
+ base in the country.
+\end_layout
+
+\begin_layout Standard
+The contributions in this milestone can be summarized as:
+\end_layout
+
+\begin_layout Enumerate
+Application of sentiment analysis to a large set of book reviews that we
+ collected.
+\end_layout
+
+\begin_layout Enumerate
+In this application a more useful but harder task of splitting the data
+ set into three classes instead of two (positive, negative and neutral).
+ A wide range of classifiers were used and tested, to provide a toolbox
+ that can be used for future sentiment analysis applications.
+\end_layout
+
+\begin_layout Enumerate
+An investigation into the effectiveness of some feature selection techniques
+ in the classification problem.
+\end_layout
+
+\begin_layout Enumerate
+Application of some other sophisticated classifiers that were never or rarely
+ used in natural language processing research.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Collection of an extensive data set from Twitter.
+\end_layout
+
+\begin_layout Section
+Market and Related Work
+\end_layout
+
+\begin_layout Subsection
+Industry and Market
+\end_layout
+
+\begin_layout Standard
+To have an idea of competing sentiment analysis products, we review here
+ the existing market.
+ Egyptian products include 25trends
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+www.25trends.me
+\end_layout
+
+\end_inset
+
+ , which analyzes posts from Twitter and Facebook and performs sentiment
+ analysis.
+ Unfortunately, the demo service does not perform satisfactorily.
+ Also Repustate's sentiment analysis API target Arabic language, but its
+ performance is weak
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+www.repustate.com/api-demo/
+\end_layout
+
+\end_inset
+
+.
+ Table 1 shows examples of some available products and their features/capabiliti
+es.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Related Work 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Company
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Language
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Features
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Arabic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+English
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "HP's Autonomy"
+target "http://www.autonomy.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "IBM's Smarter Analytics"
+target "http://www.ibm.com/analytics/us/en/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter, Facebook
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Sentiment140"
+target "http://www.sentiment140.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "twitrratr"
+target "http://twitrratr.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Social Mention"
+target "http://www.socialmention.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter ...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "tweetfeel"
+target "http://www.tweetfeel.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Repustate's"
+target "https://www.repustate.com/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter, Facebook, ...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "25trends"
+target "http://www.25trends.me/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Facebook, Twitter, YouTube
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SAMAR
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdul2014samar"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✓
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Table 1: Products and their features.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pang2008opinion"
+
+\end_inset
+
+ sentiment analysis is handled by either lexicon-based approaches, machine
+ learning approaches like text classification tasks, or hybrid approaches.
+ 
+\end_layout
+
+\begin_layout Standard
+For lexicon-based approaches 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "taboada2011lexicon"
+
+\end_inset
+
+ developed a Semantic Orientation CALculator and used some annotated dictionarie
+s of words where the annotation covers the word polarity and strength.
+ They used Amazon’s Mechanical Turk service to collect validation data to
+ their dictionaries and based their experiments on four different corpora
+ with equal numbers of positive and negative reviews.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gindl2010cross"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ding2008holistic"
+
+\end_inset
+
+ used a sentiment lexicon that depends on the context of every polarity
+ word (contextualized sentiment lexicon) and based there experiments on
+ customer reviews form Amazon and TripAdvisor
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Trip Advisor"
+target "http://www.tripadvisor.com"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In general lexicon-based sentiment classifiers show a positive bias 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kennedy2006sentiment"
+
+\end_inset
+
+, however 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "voll2007not"
+
+\end_inset
+
+ implemented normalization techniques to overcome this bias.
+\end_layout
+
+\begin_layout Standard
+For machine learning approaches 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pak2010twitter"
+
+\end_inset
+
+ used part of speech and n-grams to build a sentiment classifiers using
+ the Multinomial Naive Bayes classiﬁer, SVM and conditional random fields.
+ They tested their classifiers on a set of hand annotated twitter posts.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jiang2011"
+
+\end_inset
+
+ proposed an approach to target dependent features in the review by incorporatin
+g synaptic features that are related to the sentiment target of the review.
+ They build binary SVM classifier to perform the classification of two tasks:
+ subjectivity classification and polarity classification.
+\end_layout
+
+\begin_layout Standard
+For hybrid approaches, 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kouloumpis2011twitter"
+
+\end_inset
+
+ used n-gram features, lexicon features, and part of speech to build an
+ Ada-boost classifier.
+ They used three different corpora of Twitter messages (HASH, EMOT and iSieve)
+ to evaluate their system.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "grabner2012classification"
+
+\end_inset
+
+constructed a domain specific lexicon and used it to back the classification
+ of the reviews.
+ They used a data set for customer reviews from TripAdvisor.
+ For Arabic little work has been proposed the sentiment analysis problem.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abbasi2008sentiment"
+
+\end_inset
+
+ perform a multilingual sentiment analysis of English and Arabic Web forums.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abdul2014samar"
+
+\end_inset
+
+ proposed the SAMAR system that perform subjectivity and sentiment analysis
+ for Arabic social media using some Arabic morphological features.
+ Some Arabic sentiment data sets have been collected as mentioned in Tabel
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Arabic-sentiment-data"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Data Set Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Cite
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TAGREED (TGRD)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tweets
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MSA/Dialectal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdul2014samar"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TAHRIR (THR)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3008
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wikipedia TalkPages 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdul2014samar"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MONTADA (MONT)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3097
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Forums
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MSA/Dialectal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdul2014samar"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OCA(Opinion Corpus for Arabi)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Movie reviews
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dialectal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rushdi2011oca"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AWATIF
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2855
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wikipedia TalkPages/Forums
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MSA/Dialectal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdul2012awatif"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LABR(Large Scale Arabic Book Reviews)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63,257
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GoodReads reviews
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+www.goodreads.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MSA/Dialectal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alyatyia"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arabic sentiment data sets
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Arabic-sentiment-data"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sentiment Analysis Challenges 
+\end_layout
+
+\begin_layout Standard
+Sentiment analysis is still a formidable natural language processing task
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "maynard2012challenges"
+
+\end_inset
+
+ because unlike text categorization where the tokens depends largely on
+ the domain or the category, in sentiment analysis we usually have three
+ semantic orientations (positive, negative, and neutral) and most tokens
+ can exist in the three categories at the same time.
+ Another reason is the language ambiguity where one or more polarity token
+ depends on the context of the sentence.
+ Also most Internet users tend to give a positive rating even if their reviews
+ contain some misgivings about the entity, or some sort of sarcastic remarks,
+ where the intent of the user is the opposite of the written text.
+\end_layout
+
+\begin_layout Standard
+Some challenges are specific to Arabic language such as few research 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abbasi2008sentiment"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abdul-Mageed2011"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abdul-Mageed2011a"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdul2012awatif"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alyatyia"
+
+\end_inset
+
+, and very few datasets available for natural language different processing
+ tasks.
+ In addition, the complexities of the Arabic language, due to Arabic being
+ a morphologically rich language, add a level of complication.
+ Another problem is the existence of Modern Standard Arabic side by side
+ with different Arabic dialects, which are not yet standardized.
+\end_layout
+
+\begin_layout Section
+Experiments
+\end_layout
+
+\begin_layout Standard
+In this milestone we take the preliminary work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alyatyia"
+
+\end_inset
+
+ as a starting point, and develop comprehensive simulations and analysis.
+ In particular, we perform here an extended survey of the different classifiers
+ typically used for the sentiment polarity classification problem.
+ In addition we explore the effect of using feature selection, as well as
+ more sophisticated classifiers not generally used in NLP tasks.
+ All Experiments are applied to the data set after applying a standard partition
+ing to it.
+\end_layout
+
+\begin_layout Subsection
+LABR Data Set
+\end_layout
+
+\begin_layout Standard
+We downloaded and prepared an extentive amount of Arabic book reviews data
+ from the goodreads 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+www.goodreads.com
+\end_layout
+
+\end_inset
+
+ portal, a well known book readers social network.
+ The data set (we call it LABR) consists of 63,257 Arabic reviews.
+ All the reviews were downloaded during the month of March 2013 and they
+ were from the first 2143 books of the list of Best Arabic Books.
+ The reviews were rated on a scale of 1 to 5 stars.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LABR-reviews-examples"
+
+\end_inset
+
+ shows some examples from the data set, and more information can be found
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "alyatyia"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Data Preparation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Untitled.png
+	scale 110
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LABR reviews examples
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LABR-reviews-examples"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 3 gram results/statistics.png
+	scale 31
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Number of reviews for each class category
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Number-of-reviews"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 3 gram results/Features_Statistics.png
+	scale 31
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Number of uni grams, bigrams, and trigrams features per each class category
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Number-of-features,"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="8">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Balanced
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UnBalanced
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Neutral
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Postive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Neutral
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reviews Count
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Train Set
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4,936
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4,936
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4,936
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+34,231
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6,534
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9,841
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test Set
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,644
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,644
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,644
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8,601
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,690
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,360
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Validation Set
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,644
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,644
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,644
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8,511
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,683
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,457
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Features Count
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+unigrams
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+115,713
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+209,870
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+unigrams+bigrams
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+729,014
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,599,273
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+unigrams+bigrams+trigrams
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,589,422
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,730,195
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data preparation statistics summary
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Experiment-1-statistics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to test the proposed approaches thoroughly, we partition the data
+ into training, validation and test sets.
+ To avoid biasing the result, we use the test set sparingly, basically only
+ for evaluating two or three stages of the algorithm development, including
+ of course the final model.
+ The validation set is used as a mini-test for evaluating and comparing
+ models for possible inclusion into the final model.
+ The ratio of the data among these three sets is 6:2:2 respectively.
+ 
+\end_layout
+
+\begin_layout Standard
+We extend the work in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "alyatyia"
+
+\end_inset
+
+ by adding a class for neutral reviews.
+ In particular, the data is divided into three classes (positive, negative,
+ and neutral) where ratings of 4 and 5 are mapped to positive, rating of
+ 3 is mapped to neutral, and ratings 1 and 2 are mapped to negative.
+ We constructed two sets of data.
+ The first one is the balanced data set, where the number of reviews are
+ equal in each class category, by setting the size of the class to the minimum
+ size of the three classes.
+ The second one is the unbalanced data set, where the number of reviews
+ are not equal, and their proportions are as exist in the collected data
+ set.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Number-of-reviews"
+
+\end_inset
+
+ shows the number of reviews in every class for both balanced and unbalanced
+ sets, and Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Number-of-features,"
+
+\end_inset
+
+ and Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Experiment-1-statistics"
+
+\end_inset
+
+ show the statistic of the number of features for uni-grams range, bi-grams
+ and trigrams range.
+ 
+\end_layout
+
+\begin_layout Subsection
+Experiment 1
+\end_layout
+
+\begin_layout Standard
+In this experiment a wide range of standard classifiers are applied to both
+ the balanced and unbalanced datasets using n-gram range of unigrams, bigrams
+ and trigrams where the n-gram range of 
+\begin_inset Formula $N$
+\end_inset
+
+ degree is a combination of all lower n-grams starting from unigrams, bigrams
+ till the degree N.
+ For example the trigram range is a combination of unigrams, bigrams and
+ trigrams.
+ Also the experiment is applied on the Tf-Idf 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tfidf"
+
+\end_inset
+
+ (token frequency inverse document frequency) of the n-grams.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Experiment-2:-Polarity"
+
+\end_inset
+
+ shows the result for each classifier on the test set where the performance
+ measures are weighted F1 measure and total accuracy.
+ Note that the inclusion of a third class "neutral" makes the problem much
+ harder, and we get a lower performance than the case of two-class case
+ ("positive" and "negative").
+ The reason is that there is a large confusion between neutral and positive,
+ and between neutral and negative.
+ Sometimes the numbered ratings (1 to 5), from which we extract the target
+ class contradict what is written in the review, that even an experienced
+ human analyzer will not get it right.
+ Two accuracy measures are used to calculate the performance which are the
+ total accuracy
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1"
+
+\end_inset
+
+ and weighted F1 measure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Tf\, Idf_{word,document}=log(1+Frequency(word,document))*log(\frac{TotalDocuments}{TotalFrequency(word)})\label{eq:tfidf}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+TotalAccuracy=\frac{Total\, number\, of\, true\, predicted\, reviews}{Total\, number\, of\, reviews}\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Weighted\, F1=\frac{1}{N}*\sum_{i=1}^{i=N}\, F1(tag(i))\label{eq:2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F1(tag(i))=2*\frac{Precision(tag(i))*Recall(tag(i))}{Precision(tag(i))+Recall(tag(i))}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The classifiers used in this experiment are widely used in the area of sentiment
+ analysis and can be considered as a baseline for any further experiments.
+ The classifiers used are:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Multinomial Naive Bayes: 
+\series default
+A well known method that is used in most NLP tasks.
+ In this method each review is represented as a bag of words 
+\begin_inset Formula $\bar{X}=<x_{1},x_{2}...,x_{n}>$
+\end_inset
+
+ where the feature values are the term frequencies then the Bayes rule can
+ be applied to form a linear classifier.
+\begin_inset Formula 
+\[
+log(\, p(class|\bar{X})\,)=log(\, p(class)\,*\prod_{i=1}^{n}p(\, x_{i}|class\,))
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+log(\, p(class|\bar{X})\,)=log(\, p(class)\,)+\sum_{i=1}^{n}log(p(\, x_{i}|class\,))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bernoulli Naive Bayes: 
+\series default
+In this model
+\series bold
+ 
+\series default
+features are independent binary variables that describe the input 
+\begin_inset Formula $\bar{X}=<1,0,1...1>$
+\end_inset
+
+, which means the binary term occurrence is used instead of the frequency
+ of the term in the bag of words model.
+ the likelihood of a review given a class c is: 
+\begin_inset Formula 
+\[
+p(class|\bar{X})=\prod_{i=1}^{n}[\: p(token_{i}|class)^{x_{i}}*(1-p(token_{i}|class))^{1-x_{i}}\:]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Support Vector Machine: 
+\series default
+Linear SVM is a classifier that partitions the data using the linear formula
+ 
+\begin_inset Formula $y=\bar{W}\,.\,\bar{X}+p$
+\end_inset
+
+, selected in such a way that it maximizes the margin of separation between
+ the decision boundary and the class patterns (hence the name large margin
+ classifier).
+ SVM can be generalized to multiclass case using one versus all classification
+ trick.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Passive Aggressive:
+\series default
+ It is an online learning model that uses a hinge-loss function together
+ with an aggressiveness parameter C, in order to achieve a postive margin
+ high confidence classifier.
+ The algorithm is described in details in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "crammer2006online"
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+with two alternative modifications that make the algorithm's ability to
+ cope with noise better.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Stochastic Gradient Descent: 
+\series default
+It is an algorithm that is used to train other machine learning algorithms
+ such as SVM where it samples a subset of training examples at every learning
+ step.
+ Then it calculates the gradient from this subset only, and uses the gradient
+ to update the weight vector w in case of SVM classifier.
+ It is widely used in case of large-scale machine learning problems
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bottou2007tradeoffs"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Logistic Regression: 
+\series default
+The logistic regression uses a sigmoid function 
+\begin_inset Formula $h_{w}(x)=f(x)=\frac{1}{1+e^{-w^{T}x}}$
+\end_inset
+
+ as a learning model, then it optimizes a cost function that measures the
+ likelihood of the data given the classifier's class probability estimates.
+ The cost function can be formulated as
+\begin_inset Formula 
+\[
+Cost(\bar{w})=\frac{-1}{m}\sum_{i=1}^{n}\:[y^{(i)}log(h_{w}(x^{(i)}))+(1-y^{(i)})log(1-h_{w}(x^{(i)}))]
+\]
+
+\end_inset
+
+ where m is the total nuber of patterns, 
+\begin_inset Formula $x^{(i)}$
+\end_inset
+
+is the pattern i and 
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+ is the correct class of the pattern i.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Perceptron: 
+\series default
+It is a simple feed-forward single layer linear neural network with a unit
+ step function as an activation function.
+ It uses an iterative algorithm for training the weights, but that algorithm
+ does not take into account the margin..
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+K-Nearest Neighbour:
+\series default
+ A simple well-known machine learning classifier based on distances between
+ the patterns in the feature space.
+ Specifically, a pattern is classified according to the majority class of
+ its K-nearest neighbours.
+ 
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="18" columns="8">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Features
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Tf-Idf
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Balanced
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Unbalanced
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1g+2g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1g+2g+3g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1g+2g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1g+2g+3g
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+MNB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.558/0.560
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.573/0.577
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.572/0.577
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.706/0.631
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.705/0.609
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.706
+\series default
+/0.612
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.567/0.570
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.581/0.584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.582/0.586
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.551
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.550
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.550
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+BNB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.515/0.495
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.507/0.473
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.481/0.429
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.659/0.573
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.674/0.553
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.678/0.550
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.356/0.236
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.341/0.189
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.338/0.181
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.550
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.550
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.550
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+SVM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.535/0.534
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.568/0.565
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.570/0.566
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.698/0.690
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.727/0.712
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.731/0.712
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.566/0.564
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.590/0.588
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.589/0.588
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.734/0.709
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.750/0.723
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.751/0.725
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Passive Aggressive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.402/0.348
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.489/0.486
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.521/0.525
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.638/0.653
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.693/0.692
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.692/0.676
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.504/0.508
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.571/0.574
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.584/0.582
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.681/0.676
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.740/0.722
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.740/0.715
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SGD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.458/0.454
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.459/0.454
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.459/0.455
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.687/0.578
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.687/0.579
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.570
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.416/0.390
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.380/0.292
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.360/0.236
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.550
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.680/0.550
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logistic Regression
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.570/0.568
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.586/0.583
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.590/0.585
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.728/0.707
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.743/0.717
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.737/0.703
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.587/0.583
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.590/0.588
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.586/0.585
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.727/0.672
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.720/
+\series default
+0.659
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.709
+\series default
+/0.640
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Perceptron
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.389/0.328
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.424/0.375
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.449/0.418
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.683/0.680
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.720/0.705
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.719/0.693
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.500/0.502
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.536/0.538
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.526/0.523
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.675/0.672
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.732/0.714
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.726/0.708
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KNN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.428/0.416
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.412/0.395
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.398/0.382
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.675/0.582
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.676/0.577
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.567
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.471/0.461
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.497/0.484
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.490/0.477
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.698/0.619
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.701
+\series default
+/0.625
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.697/0.615
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\series bold
+Experiment 1: Polarity Classification Experimental Results
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Polarity-Classification-Results"
+
+\end_inset
+
+.
+\emph on
+Tf-Idf
+\emph default
+ indicates whether tf-idf weighting was used or not.
+ 
+\emph on
+MNB
+\emph default
+ is Multinomial Naive Bayes, 
+\emph on
+BNB
+\emph default
+ is Bernoulli Naive Bayes,
+\emph on
+ SVM
+\emph default
+ is the Support Vector Machine, SGD is the stochastic gradient descent and
+ KNN is the K-nearest neighbour.
+ The numbers represent weighted
+\emph on
+ 
+\emph default
+accuracy / F1 measure where the evaluation is on the test set.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Experiment-2:-Polarity"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Experiment-2:-Polarity"
+
+\end_inset
+
+ we can make the following observations:
+\end_layout
+
+\begin_layout Enumerate
+The balanced set is more challenging than the unbalanced set.
+ We think this is due to the fact it contains much fewer reviews compared
+ to the unbalanced set, which makes it difficult for the classifiers to
+ find the right decision boundary.
+\end_layout
+
+\begin_layout Enumerate
+We can get an good overall accuracy and F1 of over 70% using especially
+ SVM and logistic regression classifiers.
+ This is consistent with previous results suggesting that SVM and Logistic
+ Regression are a reliable choice.
+\end_layout
+
+\begin_layout Enumerate
+Naive Bayes, Passive Agressive, and Perceptron are also a good choice of
+ classifiers, with the careful choice of parameters.
+\end_layout
+
+\begin_layout Subsection
+Experiment 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 22-4/anova_cross_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/chi2_cross_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/class_sep_cross_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/log_reg_cross_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/relief_cross_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/svm_l1_cross_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\series bold
+Experiment 2: Feature Selection Experimental Results
+\series default
+ 
+\series bold
+with cross validation.
+
+\series default
+\emph on
+ SVM_l1_loss
+\emph default
+ indicates the Support Vector Machine using L1 loss, Anova is the Analysis
+ of Variance, CHI2 Chi-squared distribution, and Log_Reg is the logistic
+ regression.
+ (a) 
+\emph on
+Anova
+\emph default
+ (b) 
+\emph on
+Chi2
+\emph default
+ (c) 
+\emph on
+Class Separation
+\emph default
+ (d) 
+\emph on
+LogisticRegression
+\emph default
+ (e) 
+\emph on
+Relief
+\emph default
+, and (f) 
+\emph on
+SVM_l1_loss
+\emph default
+1.
+ all feature selectors are applied before the four mentioned classifiers
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Experiment-3:-Feature"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 22-4/anova_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/chi2_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/class_sep_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/log_reg_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/relief_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 22-4/relief_validation.png
+	width 30page%
+	height 20pheight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\series bold
+Experiment 2: Feature Selection Experimental Results
+\series default
+ 
+\series bold
+on validation set
+\series default
+.
+
+\emph on
+ SVM_l1_loss
+\emph default
+ indicates the Support Vector Machine using L1 loss, Anova is the Analysis
+ of Variance, CHI2 Chi-squared distribution, and Log_Reg is the logistic
+ regression.
+ (a) 
+\emph on
+Anova
+\emph default
+ (b) 
+\emph on
+Chi2
+\emph default
+ (c) 
+\emph on
+Class Separation
+\emph default
+ (d) 
+\emph on
+LogisticRegression
+\emph default
+ (e) 
+\emph on
+Relief
+\emph default
+, and (f) 
+\emph on
+SVM_l1_loss
+\emph default
+1.
+ all feature selectors are applied before the four mentioned classifiers.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Experiment-3:-Feature-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Number-of-features,"
+
+\end_inset
+
+ as the degree of n-gram range increase the number of features increases
+ significantly and approaches 3.7 million in trigram range of the unbalanced
+ data set.
+ There are two overriding reasons why one should consider applying feature
+ selection.
+ The first reason is that with such large number of features the classifier
+ can exhibit some overfitting, due to the curse of dimensionality.
+ The other reason is that with millions of features, the computational burden
+ will be too high for many classifiersto be practically feasible.
+ This will basically exclude many good classifiers that have the potential
+ to improve the performance.
+ In this experiment we test whether any of these two arguments are valid,
+ and explore whether feature selection is beneficial.
+ So some feature selection techniques were applied to Tf-Idf (token frequency
+ inverse document frequency) trigram training set to explore their effects.
+ The feature selection experiments are:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SVM (l1 loss) classifier:
+\series default
+ One of the beneficial features of the linear SVM is that inherently applies
+ some sort of feature selection.
+ This is because the weight values are an indication of the importance of
+ the features.
+ For example, features that have negligible corresponding weights are deemed
+ unimportant or ineffective.
+ This is especially true if we use the L1 error measure for training the
+ SVM (defined as norm 
+\begin_inset Formula $||x||_{1}=\sum_{i}|x_{i}|$
+\end_inset
+
+).
+ In such case, many insignificant weight will end up being zero.
+ So, we utilize this aspect to perform feature selection using L1 SVM training.
+ We sort the features by decreasing weights, and keep the K features with
+ the highest 
+\begin_inset Formula $K$
+\end_inset
+
+ features.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Logistic regression classifier:
+\series default
+ Similar to the case of SVM, logistic regression performs some form of inherent
+ feature selection.
+ We therefore utilize the logistic regression as a tool for selecting the
+ top features, associated with the largest weights.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Chi-squared feature selection: 
+\series default
+A well known method that is used to test the independence of two events,
+ and that is based on the identity that defines independent events A and
+ B as follows:
+\begin_inset Formula 
+\[
+P(AB)=P(A)*P(B)
+\]
+
+\end_inset
+
+In NLP feature selection, event A is the occurrence of the class and event
+ B is the occurrence of term.
+ Then terms are ranked according to the following formula: 
+\begin_inset Formula 
+\[
+X^{2}(D,t,c)=\sum_{e_{t}\text{Є\{0,1\}}}\sum_{e_{c}\text{Є\{0,1\}}}\frac{(N_{e_{t}e_{c}}-E_{e_{t}e_{c}})^{2}}{E_{e_{t}e_{c}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+where e
+\begin_inset Formula $_{t}$
+\end_inset
+
+ means whether the document contains term t or not, e
+\begin_inset Formula $_{c}$
+\end_inset
+
+ means whether the document is in class c or not, N is the count of documents
+ D that have the values of e
+\begin_inset Formula $_{t}$
+\end_inset
+
+and e
+\begin_inset Formula $_{c}$
+\end_inset
+
+ that are indicated by the two subscripts, and E is the expected frequency.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Analysis of variance feature selection:
+\series default
+ The ANOVA F-test can be used to assess the weight of each feature in a
+ data set.
+ The formula for the ANOVA F-test statistic is 
+\begin_inset Formula 
+\[
+F=\frac{Explained\, Variance}{Un\, Explained\, Variance}
+\]
+
+\end_inset
+
+where the explained variance is 
+\begin_inset Formula 
+\[
+\sum_{i}\frac{n_{i}(\overline{Y}_{i}-\overline{Y})^{2}}{K-1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\overline{Y}_{i}$
+\end_inset
+
+ is the sample mean in the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ feature, 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ is the number of observations in the 
+\begin_inset Formula $i_{th}$
+\end_inset
+
+ feature, 
+\begin_inset Formula $\overline{Y}$
+\end_inset
+
+ is the overall mean of the data, and 
+\begin_inset Formula $K$
+\end_inset
+
+ is total the number of features.
+ The unexplained variance is
+\begin_inset Formula 
+\[
+\sum_{ij}\frac{n_{i}(Y_{ij}-\overline{Y})^{2}}{N-K}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $Y_{ij}$
+\end_inset
+
+ is the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ observation in the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ feature, 
+\begin_inset Formula $K$
+\end_inset
+
+ is total the number of features, and 
+\begin_inset Formula $N$
+\end_inset
+
+ is the overall sample size.
+ Then, the 
+\begin_inset Formula $p$
+\end_inset
+
+ value based on the 
+\begin_inset Formula $F$
+\end_inset
+
+ statistic is calculated by
+\begin_inset Formula 
+\[
+pvalue=Prob\:{F(K-1,N-K)>F}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $F(K-1,N-K)$
+\end_inset
+
+ is a random variable that follows an 
+\begin_inset Formula $F$
+\end_inset
+
+ distribution with degree of freedom 
+\begin_inset Formula $K-1$
+\end_inset
+
+ and 
+\begin_inset Formula $N-K$
+\end_inset
+
+ predictors are ranked by sorting according to the 
+\begin_inset Formula $pvalue$
+\end_inset
+
+ in ascending order.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Relief feature selection: 
+\series default
+Relief is a scoring feature selection algorithm based on nearest neighbours.
+ The Relief algorithm will be repeated 
+\begin_inset Formula $m$
+\end_inset
+
+ times to adjust the weights of the features by selecting a random instance
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ from the data every iteration as follow
+\begin_inset Formula 
+\[
+W_{i}=W_{i-1}-(x_{i}-nearHit_{i})^{2}+\sum_{c}(x_{i}-nearMiss_{i,c})^{2}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ is the feature vector weight at iteration 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $nearHit_{i}$
+\end_inset
+
+ is the closest pattern to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ in the same class and nearMiss
+\begin_inset Formula $_{i,c}$
+\end_inset
+
+ is the closest miss pattern to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ in class 
+\begin_inset Formula $c$
+\end_inset
+
+ (miss class).
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Class Separation Feature selection: 
+\series default
+This method ranks features by estimating the class means 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+ for each feature 
+\begin_inset Formula $i$
+\end_inset
+
+ and class 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Then it estimates the class feature standard deviation 
+\begin_inset Formula $s_{ik}$
+\end_inset
+
+ for each feature 
+\begin_inset Formula $i$
+\end_inset
+
+ and class 
+\begin_inset Formula $k$
+\end_inset
+
+, and at the end it measures the feature separation by the following equation:
+\begin_inset Formula 
+\[
+H_{i}=\sum_{k^{'}=1,k!=k^{'}}^{K}\sum_{k=1}^{K}[\frac{|m_{i}(k)-m_{i}(k^{'})|}{s_{i}(k)+s_{i}(k^{'})}]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $k'$
+\end_inset
+
+ run over the number of classes, 
+\begin_inset Formula $m_{i}(k)$
+\end_inset
+
+ is the mean of feature 
+\begin_inset Formula $i$
+\end_inset
+
+ for class
+\begin_inset Formula $k$
+\end_inset
+
+, and 
+\begin_inset Formula $s_{i}(k)$
+\end_inset
+
+ is the standard deviation for feature 
+\begin_inset Formula $i$
+\end_inset
+
+ for class 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ If the means are far away (normalized by standard deviation of all points)
+ then there is good separability, and the feature is good.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement b
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+For each Feature Selection (FS) in Feature Selection Algorithms
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\qquad$
+\end_inset
+
+ For each percent (P) in [0.1,1,10,20...100]
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\qquad\qquad\qquad$
+\end_inset
+
+X_modified = Apply FS,P on the X_Train
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\qquad\qquad\qquad$
+\end_inset
+
+For each Classifier (C) in Classifiers
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\qquad\qquad\qquad\qquad$
+\end_inset
+
+ Accuracy[C,P] = Cross validation(X_modified,C, 5 folds) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\qquad\qquad\qquad\qquad$
+\end_inset
+
+ F_Measure[C,P] = Cross validation(X_modified,C, 5 folds) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\qquad\qquad\qquad$
+\end_inset
+
+Average_Accuracy[P] = Mean(Accuracy[:,P])
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\qquad\qquad\qquad$
+\end_inset
+
+Average_F-measure[P] = Mean(Accuracy[:,P])
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Experiment-3-pesudo"
+
+\end_inset
+
+Experiment 2 pesudo code
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Experiment-3-pesudo"
+
+\end_inset
+
+ shows the pseudo code for this experiment for the above-mentioned feature
+ selectors and for the following classifiers: SVM, passive aggressive, logistic
+ regression and perceptron (as for these algorithms we get the highest accuracy
+ and F-measure in Experiment 1.
+ This experiment was applied on the training set by ordering the features
+ according to one of the previous feature selectors and selecting the top
+ P features then applying one of the classifiers with cross validation (5
+ fold validation).
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Experiment-3:-Feature"
+
+\end_inset
+
+ Shows the result of applying Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Experiment-3-pesudo"
+
+\end_inset
+
+ on the training set with cross validation, while Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Experiment-3:-Feature-1"
+
+\end_inset
+
+ shows applying the same algorithm on the training set but without the cross
+ validation step and evaluating on the validation set.
+ 
+\end_layout
+
+\begin_layout Standard
+We notice that SVM_l1, Anova and Chi2 feature selectors have inconsistent
+ behaviour between the two experiments we think the reasons for this might
+ be:
+\end_layout
+
+\begin_layout Itemize
+Those feature selector may not be suitable for this experiment
+\end_layout
+
+\begin_layout Itemize
+Data is noisy and not reviewed manually for example one review has English
+ meaning 
+\begin_inset Quotes eld
+\end_inset
+
+wonderful
+\begin_inset Quotes erd
+\end_inset
+
+ and the user rating is negative.
+\end_layout
+
+\begin_layout Standard
+Due to this inconsistent behavior, we decided to not further pursue feature
+ selection for classifiers that can readily handle all the available features.
+ Instead, we pursued using feature selection for more sophisticated classifiers
+ that can't handle too many features, as explained in the following section.
+\end_layout
+
+\begin_layout Subsection
+Experiment 3
+\end_layout
+
+\begin_layout Standard
+Sophisticated classifiers in the area of machine learning were applied to
+ this task after applying feature selection to the top 100,1000 and 3000
+ best features.
+ Those classifiers are Gradient boosting, Random Forest (30 trees),Gaussian
+ Process and Ada boost.
+ The reason for applying feature selection on these classifiers is that
+ they do not naturally perform feature selection, e.g.
+ like what SVM does.
+ In addition, these algorithms generally consume a lot of resources in terms
+ of memory and run time, especially when the dataset size grows significantly.
+ The results reported in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Experiment-4:-Sophisticated"
+
+\end_inset
+
+ are based on training each classifier on the Tf-Idf (token frequency inverse
+ document frequency) trigram unbalanced dataset and evaluating the classifier
+ on the validation set where the numbers represent weighted
+\emph on
+ 
+\emph default
+accuracy / F1- measure.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tb
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scalebox{0.65}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="26" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Feature Selector/Classifier
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Tf-Idf-3gram-range
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Features Number
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+3000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relief/Grad_boosting
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.542
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Log_Reg/Grad_boosting
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.672/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.678/0.576
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.688/0.592
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class_Sep/Grad_boosting
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.672/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.671/0.542
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relief/Ada_boost
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Log_Reg/Ada_boost
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.675/0.546
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.676/0.551
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class_Sep/Ada_boost
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relief/Random_Forest
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.542
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Log_Reg/Random_Forest
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.668/0.540
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.649/0.584
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.644/0.603
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class_Sep/Random_Forest
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.672/0.542
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.664/0.542
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Relief/Gaussian_process
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.665/0.540
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.669/0.542
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.671/0.543
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Log_Reg/Gaussian_process
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.662/0.571
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.667/0.587
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.673/0.595
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class_Sep/Gaussian_process
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.657/0.541
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.659/0.543
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.661/0.554
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\series bold
+Experiment 3: Sophisticated Classifiers Experimental Results.
+ 
+\series default
+The numbers represent weighted
+\emph on
+ 
+\emph default
+accuracy / F1 measure where the evaluation is on the validation set.
+\series bold
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Experiment-4:-Sophisticated"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The results show that with using less than 0.1% of the features (3000 features)
+ we get an F1 measure of around 60%, which is close to the 70% achieved
+ using all the features (over 3.7 million).
+ This is an interesting observation, and we plan to investigate this further
+ in the next phase, in addition to investigating using dimensionality reduction
+ techniques e.g.
+ Principal Component Analysis.
+\end_layout
+
+\begin_layout Section
+Twitter Data set 
+\end_layout
+
+\begin_layout Subsection
+Data set Collection
+\end_layout
+
+\begin_layout Standard
+We have collected over 84,000 Arabic tweets.
+ We downloaded the tweets over two stages: In the first stage we used SocialBake
+rs 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.socialbakers.com/twitter/country/egypt/
+\end_layout
+
+\end_inset
+
+ to determine the most active Egyptian Twitter accounts so we got a list
+ of 30 names.
+ We got the recent tweets of these accounts till November 2013.
+ These turned out to be about 36,000.
+ In the second stage we crawled EgyptTrends 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://twitter.com/EgyptTrends
+\end_layout
+
+\end_inset
+
+, a Twitter page for the top trending hash tags in Egypt.
+ We got about 2500 distinct hash tags which are used again to download the
+ tweets.
+ we ended up obtaining about 48,000 tweets.
+ After filtering out the non-Arabic tweets, and performing some pre-processing
+ steps to clean up unwanted content like HTML, we ended up with 54,716 Arabic
+ tweets.
+\end_layout
+
+\begin_layout Subsection
+Data set Properties
+\end_layout
+
+\begin_layout Standard
+The data set contains 54,716 tweets, 12725 hash tags, and 132212 token types/wor
+ds.
+ Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tweets,-Tokens-and"
+
+\end_inset
+
+ shows the overall statistics.
+ The tweets were tokenized leaving every hash tag as one token.
+ Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tweets,-Tokens-and"
+
+\end_inset
+
+a shows the frequency distribution for all tokens in the data set while
+ Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tweets,-Tokens-and"
+
+\end_inset
+
+b shows the frequency distribution for the hash tags in the data set.
+ Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tweets,-Tokens-and"
+
+\end_inset
+
+c shows the box plot of the relation between tweets to hash tags and hash
+ tags to tweets.
+ The frequency distribution for all tokens shows that some tokens are repeated
+ more than 
+\begin_inset Formula $10^{4}$
+\end_inset
+
+ while most other tokens have low frequency.
+ This indicates that the percentage of stop words in the data is high.
+ Also The frequency distribution of hash tags shows that very few hash tags
+ are repeated 
+\begin_inset Formula $10^{3}$
+\end_inset
+
+ while most tags are repeated less than 
+\begin_inset Formula $10$
+\end_inset
+
+ times.
+\end_layout
+
+\begin_layout Standard
+For the next steps with the data set we plan to use Amazon Mechanical Turk
+ service to manually tag the data set, where Amazon Mechanical Turk is an
+ online service that allows companies or individuals to post their data
+ and other workers can manually tag the data with a predefined charge given
+ to the worker when successfully completing his work.
+ Several API's are available with Amazon Mechanical Turk, and we will use
+ an API called Boto
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://github.com/boto/boto
+\end_layout
+
+\end_inset
+
+ that can be used easily with python.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename twitter/figure_1.png
+	width 20page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename twitter/figure_2.png
+	width 20page%
+	height 20pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename twitter/figure_5.png
+	width 20page%
+	height 20pheight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tweets, Tokens and Hash-Tags Statistics.
+ (a) the frequency distribution of the vocabulary tokens.
+ (b) the frequency distribution of the hash tags tokens.
+ (c) the number of tweets per hash tag and the number of hash tag per tweet
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tweets,-Tokens-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusion and Future Work
+\end_layout
+
+\begin_layout Standard
+In this report we presented our progress in the social media analytics project.
+ We discussed some experiments based on LABR data set by 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "alyatyia"
+
+\end_inset
+
+, and performed a comprehensive study, involving testing a wide range of
+ classifiers, applying some feature selection techniques, and applying some
+ sophisticated classifiers that need high computational and memory resources.
+ We also presented the data set collected from Twitter and computed some
+ of its statistics.
+ Our planned next steps include:
+\end_layout
+
+\begin_layout Enumerate
+Manually tagging the data set by using Amazon Mechanical Turk service.
+\end_layout
+
+\begin_layout Enumerate
+Developing some topic extraction techniques to extract the most important
+ topics for a given set of tweets.
+\end_layout
+
+\begin_layout Enumerate
+Developing an algorithm for subjectivity and sentiment analysis for a given
+ set of tweets.
+\end_layout
+
+\begin_layout Enumerate
+Extracting Arabic sentiment lexicon and explore its potential.
+\end_layout
+
+\begin_layout Enumerate
+Exploring using Arabic-specific and more powerful specially tailored features.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "Sentiment"
+options "abbrvnat"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

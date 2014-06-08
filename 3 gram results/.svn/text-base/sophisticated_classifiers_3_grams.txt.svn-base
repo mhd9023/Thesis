@@ -1,0 +1,42 @@
+('Loading data:', '3-unbalanced')
+('Features Generation:', 'tfidf_ng3')
+('Extract_Features: ', 'CHI2', 'Precent: ', 0.1)
+('Training: ', 'forest30')
+('N_Selected: ', 3730)
+Testing
+('tp:', 480.0, ' fp:', 349.0, ' fn:', 1203.0)
+('tp:', 7713.0, ' fp:', 2610.0, ' fn:', 798.0)
+('tp:', 585.0, ' fp:', 914.0, ' fn:', 1872.0)
+f1 = 0.659
+wacc = 0.694
+tacc = 0.694
+______________________________________________________________________
+
+('Loading data:', '3-unbalanced')
+('Features Generation:', 'tfidf_ng3')
+('Extract_Features: ', 'CHI2', 'Precent: ', 0.1)
+('Training: ', 'ada_boost')
+('N_Selected: ', 3730)
+Testing
+('tp:', 50.0, ' fp:', 29.0, ' fn:', 1633.0)
+('tp:', 8470.0, ' fp:', 4021.0, ' fn:', 41.0)
+('tp:', 27.0, ' fp:', 54.0, ' fn:', 2430.0)
+f1 = 0.554
+wacc = 0.676
+tacc = 0.676
+______________________________________________________________________
+('Loading data:', '3-unbalanced')
+('Features Generation:', 'tfidf_ng3')
+('Extract_Features: ', 'CHI2', 'Precent: ', 0.1)
+('N_Selected: ', 3730)
+('Training: ', 'grad_boosting')
+Testing
+('tp:', 310.0, ' fp:', 163.0, ' fn:', 1373.0)
+('tp:', 8317.0, ' fp:', 3348.0, ' fn:', 194.0)
+('tp:', 253.0, ' fp:', 260.0, ' fn:', 2204.0)
+f1 = 0.626
+wacc = 0.702
+tacc = 0.702
+_____________________________________________________________________
+
+

@@ -1,0 +1,938 @@
+stem_verb_const.CONJ_PREFIX_LETTERS ??????
+stem_verb_const.CONJ_PREFIX_LETTERS ??????
+------------------------------------------------------------
+('Loading data:', '3-unbalanced')
+('Features Generation:', 'tfidf_ng3')
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 10)
+('N_selected : ', 373020)
+('Training: ', 'log_reg')
+Testing
+('tp:', 330.0, ' fp:', 102.0, ' fn:', 1353.0)
+('tp:', 8323.0, ' fp:', 3245.0, ' fn:', 188.0)
+('tp:', 301.0, ' fp:', 350.0, ' fn:', 2156.0)
+f1 = 0.637
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 20)
+('N_selected : ', 746039)
+('Training: ', 'log_reg')
+Testing
+('tp:', 317.0, ' fp:', 98.0, ' fn:', 1366.0)
+('tp:', 8326.0, ' fp:', 3263.0, ' fn:', 185.0)
+('tp:', 296.0, ' fp:', 351.0, ' fn:', 2161.0)
+f1 = 0.635
+wacc = 0.707
+tacc = 0.707
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 30)
+('N_selected : ', 1119059)
+('Training: ', 'log_reg')
+Testing
+('tp:', 312.0, ' fp:', 100.0, ' fn:', 1371.0)
+('tp:', 8306.0, ' fp:', 3207.0, ' fn:', 205.0)
+('tp:', 329.0, ' fp:', 397.0, ' fn:', 2128.0)
+f1 = 0.638
+wacc = 0.707
+tacc = 0.707
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 40)
+('N_selected : ', 1492078)
+('Training: ', 'log_reg')
+Testing
+('tp:', 315.0, ' fp:', 101.0, ' fn:', 1368.0)
+('tp:', 8309.0, ' fp:', 3212.0, ' fn:', 202.0)
+('tp:', 326.0, ' fp:', 388.0, ' fn:', 2131.0)
+f1 = 0.638
+wacc = 0.707
+tacc = 0.707
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 50)
+('N_selected : ', 1865098)
+('Training: ', 'log_reg')
+Testing
+('tp:', 320.0, ' fp:', 104.0, ' fn:', 1363.0)
+('tp:', 8313.0, ' fp:', 3206.0, ' fn:', 198.0)
+('tp:', 323.0, ' fp:', 385.0, ' fn:', 2134.0)
+f1 = 0.638
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 60)
+('N_selected : ', 2238117)
+('Training: ', 'log_reg')
+Testing
+('tp:', 324.0, ' fp:', 104.0, ' fn:', 1359.0)
+('tp:', 8314.0, ' fp:', 3206.0, ' fn:', 197.0)
+('tp:', 324.0, ' fp:', 379.0, ' fn:', 2133.0)
+f1 = 0.639
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 70)
+('N_selected : ', 2611137)
+('Training: ', 'log_reg')
+Testing
+('tp:', 329.0, ' fp:', 106.0, ' fn:', 1354.0)
+('tp:', 8314.0, ' fp:', 3204.0, ' fn:', 197.0)
+('tp:', 323.0, ' fp:', 375.0, ' fn:', 2134.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 80)
+('N_selected : ', 2984156)
+('Training: ', 'log_reg')
+Testing
+('tp:', 327.0, ' fp:', 106.0, ' fn:', 1356.0)
+('tp:', 8315.0, ' fp:', 3206.0, ' fn:', 196.0)
+('tp:', 327.0, ' fp:', 370.0, ' fn:', 2130.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 90)
+('N_selected : ', 3357176)
+('Training: ', 'log_reg')
+Testing
+('tp:', 331.0, ' fp:', 107.0, ' fn:', 1352.0)
+('tp:', 8312.0, ' fp:', 3200.0, ' fn:', 199.0)
+('tp:', 327.0, ' fp:', 374.0, ' fn:', 2130.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'SVM_l1_loss', 'Precent: ', 100)
+('N_selected : ', 3730195)
+('Training: ', 'log_reg')
+Testing
+('tp:', 329.0, ' fp:', 109.0, ' fn:', 1354.0)
+('tp:', 8312.0, ' fp:', 3198.0, ' fn:', 199.0)
+('tp:', 326.0, ' fp:', 377.0, ' fn:', 2131.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 10)
+('N_selected : ', 373020)
+('Training: ', 'log_reg')
+Testing
+('tp:', 303.0, ' fp:', 115.0, ' fn:', 1380.0)
+('tp:', 8338.0, ' fp:', 3355.0, ' fn:', 173.0)
+('tp:', 236.0, ' fp:', 304.0, ' fn:', 2221.0)
+f1 = 0.624
+wacc = 0.702
+tacc = 0.702
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 20)
+('N_selected : ', 746039)
+('Training: ', 'log_reg')
+Testing
+('tp:', 308.0, ' fp:', 119.0, ' fn:', 1375.0)
+('tp:', 8338.0, ' fp:', 3337.0, ' fn:', 173.0)
+('tp:', 243.0, ' fp:', 306.0, ' fn:', 2214.0)
+f1 = 0.626
+wacc = 0.703
+tacc = 0.703
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 30)
+('N_selected : ', 1119059)
+('Training: ', 'log_reg')
+Testing
+('tp:', 316.0, ' fp:', 113.0, ' fn:', 1367.0)
+('tp:', 8342.0, ' fp:', 3330.0, ' fn:', 169.0)
+('tp:', 248.0, ' fp:', 302.0, ' fn:', 2209.0)
+f1 = 0.628
+wacc = 0.704
+tacc = 0.704
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 40)
+('N_selected : ', 1492078)
+('Training: ', 'log_reg')
+Testing
+('tp:', 314.0, ' fp:', 112.0, ' fn:', 1369.0)
+('tp:', 8338.0, ' fp:', 3318.0, ' fn:', 173.0)
+('tp:', 258.0, ' fp:', 311.0, ' fn:', 2199.0)
+f1 = 0.629
+wacc = 0.704
+tacc = 0.704
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 50)
+('N_selected : ', 1865098)
+('Training: ', 'log_reg')
+Testing
+('tp:', 314.0, ' fp:', 111.0, ' fn:', 1369.0)
+('tp:', 8338.0, ' fp:', 3306.0, ' fn:', 173.0)
+('tp:', 267.0, ' fp:', 315.0, ' fn:', 2190.0)
+f1 = 0.630
+wacc = 0.705
+tacc = 0.705
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 60)
+('N_selected : ', 2238117)
+('Training: ', 'log_reg')
+Testing
+('tp:', 325.0, ' fp:', 108.0, ' fn:', 1358.0)
+('tp:', 8333.0, ' fp:', 3297.0, ' fn:', 178.0)
+('tp:', 269.0, ' fp:', 319.0, ' fn:', 2188.0)
+f1 = 0.632
+wacc = 0.706
+tacc = 0.706
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 70)
+('N_selected : ', 2611137)
+('Training: ', 'log_reg')
+Testing
+('tp:', 327.0, ' fp:', 115.0, ' fn:', 1356.0)
+('tp:', 8327.0, ' fp:', 3267.0, ' fn:', 184.0)
+('tp:', 275.0, ' fp:', 340.0, ' fn:', 2182.0)
+f1 = 0.633
+wacc = 0.706
+tacc = 0.706
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 80)
+('N_selected : ', 2984156)
+('Training: ', 'log_reg')
+Testing
+('tp:', 330.0, ' fp:', 111.0, ' fn:', 1353.0)
+('tp:', 8320.0, ' fp:', 3217.0, ' fn:', 191.0)
+('tp:', 314.0, ' fp:', 359.0, ' fn:', 2143.0)
+f1 = 0.639
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 90)
+('N_selected : ', 3357176)
+('Training: ', 'log_reg')
+Testing
+('tp:', 332.0, ' fp:', 106.0, ' fn:', 1351.0)
+('tp:', 8321.0, ' fp:', 3206.0, ' fn:', 190.0)
+('tp:', 320.0, ' fp:', 366.0, ' fn:', 2137.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'SVM_l2_loss', 'Precent: ', 100)
+('N_selected : ', 3730195)
+('Training: ', 'log_reg')
+Testing
+('tp:', 329.0, ' fp:', 109.0, ' fn:', 1354.0)
+('tp:', 8312.0, ' fp:', 3198.0, ' fn:', 199.0)
+('tp:', 326.0, ' fp:', 377.0, ' fn:', 2131.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'Anova', 'Precent: ', 10)
+C:\Python27\lib\site-packages\sklearn\feature_selection\univariate_selection.py:319: UserWarning: Duplicate scores. Result may depend on feature ordering.There are probably duplicate features, or you used a classification score for a regression task.
+  warn("Duplicate scores. Result may depend on feature ordering."
+('Training: ', 'log_reg')
+Testing
+('tp:', 287.0, ' fp:', 85.0, ' fn:', 1396.0)
+('tp:', 8290.0, ' fp:', 3209.0, ' fn:', 221.0)
+('tp:', 350.0, ' fp:', 430.0, ' fn:', 2107.0)
+f1 = 0.637
+wacc = 0.706
+tacc = 0.706
+('Extract_Features: ', 'Anova', 'Precent: ', 20)
+('Training: ', 'log_reg')
+Testing
+('tp:', 292.0, ' fp:', 87.0, ' fn:', 1391.0)
+('tp:', 8321.0, ' fp:', 3258.0, ' fn:', 190.0)
+('tp:', 319.0, ' fp:', 374.0, ' fn:', 2138.0)
+f1 = 0.634
+wacc = 0.706
+tacc = 0.706
+('Extract_Features: ', 'Anova', 'Precent: ', 30)
+('Training: ', 'log_reg')
+Testing
+('tp:', 304.0, ' fp:', 95.0, ' fn:', 1379.0)
+('tp:', 8346.0, ' fp:', 3325.0, ' fn:', 165.0)
+('tp:', 273.0, ' fp:', 308.0, ' fn:', 2184.0)
+f1 = 0.630
+wacc = 0.705
+tacc = 0.705
+('Extract_Features: ', 'Anova', 'Precent: ', 40)
+('Training: ', 'log_reg')
+Testing
+('tp:', 313.0, ' fp:', 101.0, ' fn:', 1370.0)
+('tp:', 8346.0, ' fp:', 3283.0, ' fn:', 165.0)
+('tp:', 287.0, ' fp:', 321.0, ' fn:', 2170.0)
+f1 = 0.634
+wacc = 0.707
+tacc = 0.707
+('Extract_Features: ', 'Anova', 'Precent: ', 50)
+('Training: ', 'log_reg')
+Testing
+('tp:', 315.0, ' fp:', 103.0, ' fn:', 1368.0)
+('tp:', 8341.0, ' fp:', 3268.0, ' fn:', 170.0)
+('tp:', 294.0, ' fp:', 330.0, ' fn:', 2163.0)
+f1 = 0.635
+wacc = 0.707
+tacc = 0.707
+('Extract_Features: ', 'Anova', 'Precent: ', 60)
+('Training: ', 'log_reg')
+Testing
+('tp:', 319.0, ' fp:', 106.0, ' fn:', 1364.0)
+('tp:', 8330.0, ' fp:', 3250.0, ' fn:', 181.0)
+('tp:', 303.0, ' fp:', 343.0, ' fn:', 2154.0)
+f1 = 0.636
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'Anova', 'Precent: ', 70)
+('Training: ', 'log_reg')
+Testing
+('tp:', 321.0, ' fp:', 108.0, ' fn:', 1362.0)
+('tp:', 8326.0, ' fp:', 3234.0, ' fn:', 185.0)
+('tp:', 309.0, ' fp:', 353.0, ' fn:', 2148.0)
+f1 = 0.637
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'Anova', 'Precent: ', 80)
+('Training: ', 'log_reg')
+Testing
+('tp:', 322.0, ' fp:', 108.0, ' fn:', 1361.0)
+('tp:', 8321.0, ' fp:', 3223.0, ' fn:', 190.0)
+('tp:', 315.0, ' fp:', 362.0, ' fn:', 2142.0)
+f1 = 0.638
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'Anova', 'Precent: ', 90)
+('Training: ', 'log_reg')
+Testing
+('tp:', 324.0, ' fp:', 110.0, ' fn:', 1359.0)
+('tp:', 8311.0, ' fp:', 3210.0, ' fn:', 200.0)
+('tp:', 321.0, ' fp:', 375.0, ' fn:', 2136.0)
+f1 = 0.638
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'Anova', 'Precent: ', 100)
+('Training: ', 'log_reg')
+Testing
+('tp:', 329.0, ' fp:', 109.0, ' fn:', 1354.0)
+('tp:', 8312.0, ' fp:', 3198.0, ' fn:', 199.0)
+('tp:', 326.0, ' fp:', 377.0, ' fn:', 2131.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 10)
+('N_selected : ', 373020)
+('Training: ', 'log_reg')
+Testing
+('tp:', 335.0, ' fp:', 103.0, ' fn:', 1348.0)
+('tp:', 8300.0, ' fp:', 3165.0, ' fn:', 211.0)
+('tp:', 349.0, ' fp:', 399.0, ' fn:', 2108.0)
+f1 = 0.643
+wacc = 0.710
+tacc = 0.710
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 20)
+('N_selected : ', 746039)
+('Training: ', 'log_reg')
+Testing
+('tp:', 317.0, ' fp:', 96.0, ' fn:', 1366.0)
+('tp:', 8315.0, ' fp:', 3181.0, ' fn:', 196.0)
+('tp:', 345.0, ' fp:', 397.0, ' fn:', 2112.0)
+f1 = 0.641
+wacc = 0.710
+tacc = 0.710
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 30)
+('N_selected : ', 1119059)
+('Training: ', 'log_reg')
+Testing
+('tp:', 311.0, ' fp:', 100.0, ' fn:', 1372.0)
+('tp:', 8304.0, ' fp:', 3191.0, ' fn:', 207.0)
+('tp:', 345.0, ' fp:', 400.0, ' fn:', 2112.0)
+f1 = 0.640
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 40)
+('N_selected : ', 1492078)
+('Training: ', 'log_reg')
+Testing
+('tp:', 315.0, ' fp:', 101.0, ' fn:', 1368.0)
+('tp:', 8306.0, ' fp:', 3193.0, ' fn:', 205.0)
+('tp:', 340.0, ' fp:', 396.0, ' fn:', 2117.0)
+f1 = 0.640
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 50)
+('N_selected : ', 1865098)
+('Training: ', 'log_reg')
+Testing
+('tp:', 320.0, ' fp:', 104.0, ' fn:', 1363.0)
+('tp:', 8310.0, ' fp:', 3198.0, ' fn:', 201.0)
+('tp:', 333.0, ' fp:', 386.0, ' fn:', 2124.0)
+f1 = 0.640
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 60)
+('N_selected : ', 2238117)
+('Training: ', 'log_reg')
+Testing
+('tp:', 322.0, ' fp:', 104.0, ' fn:', 1361.0)
+('tp:', 8310.0, ' fp:', 3193.0, ' fn:', 201.0)
+('tp:', 333.0, ' fp:', 389.0, ' fn:', 2124.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 70)
+('N_selected : ', 2611137)
+('Training: ', 'log_reg')
+Testing
+('tp:', 323.0, ' fp:', 105.0, ' fn:', 1360.0)
+('tp:', 8312.0, ' fp:', 3202.0, ' fn:', 199.0)
+('tp:', 329.0, ' fp:', 380.0, ' fn:', 2128.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 80)
+('N_selected : ', 2984156)
+('Training: ', 'log_reg')
+Testing
+('tp:', 327.0, ' fp:', 106.0, ' fn:', 1356.0)
+('tp:', 8310.0, ' fp:', 3198.0, ' fn:', 201.0)
+('tp:', 330.0, ' fp:', 380.0, ' fn:', 2127.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 90)
+('N_selected : ', 3357176)
+('Training: ', 'log_reg')
+Testing
+('tp:', 330.0, ' fp:', 106.0, ' fn:', 1353.0)
+('tp:', 8312.0, ' fp:', 3201.0, ' fn:', 199.0)
+('tp:', 328.0, ' fp:', 374.0, ' fn:', 2129.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'Log_Reg', 'Precent: ', 100)
+('N_selected : ', 3730195)
+('Training: ', 'log_reg')
+Testing
+('tp:', 329.0, ' fp:', 109.0, ' fn:', 1354.0)
+('tp:', 8312.0, ' fp:', 3198.0, ' fn:', 199.0)
+('tp:', 326.0, ' fp:', 377.0, ' fn:', 2131.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'CHI2', 'Precent: ', 10)
+('Training: ', 'log_reg')
+Testing
+('tp:', 299.0, ' fp:', 91.0, ' fn:', 1384.0)
+('tp:', 8304.0, ' fp:', 3233.0, ' fn:', 207.0)
+('tp:', 320.0, ' fp:', 404.0, ' fn:', 2137.0)
+f1 = 0.635
+wacc = 0.705
+tacc = 0.705
+('Extract_Features: ', 'CHI2', 'Precent: ', 20)
+('Training: ', 'log_reg')
+Testing
+('tp:', 296.0, ' fp:', 97.0, ' fn:', 1387.0)
+('tp:', 8329.0, ' fp:', 3279.0, ' fn:', 182.0)
+('tp:', 293.0, ' fp:', 357.0, ' fn:', 2164.0)
+f1 = 0.632
+wacc = 0.705
+tacc = 0.705
+('Extract_Features: ', 'CHI2', 'Precent: ', 30)
+('Training: ', 'log_reg')
+Testing
+('tp:', 313.0, ' fp:', 102.0, ' fn:', 1370.0)
+('tp:', 8343.0, ' fp:', 3291.0, ' fn:', 168.0)
+('tp:', 280.0, ' fp:', 322.0, ' fn:', 2177.0)
+f1 = 0.632
+wacc = 0.706
+tacc = 0.706
+('Extract_Features: ', 'CHI2', 'Precent: ', 40)
+('Training: ', 'log_reg')
+Testing
+('tp:', 316.0, ' fp:', 99.0, ' fn:', 1367.0)
+('tp:', 8352.0, ' fp:', 3291.0, ' fn:', 159.0)
+('tp:', 285.0, ' fp:', 308.0, ' fn:', 2172.0)
+f1 = 0.634
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'CHI2', 'Precent: ', 50)
+('Training: ', 'log_reg')
+Testing
+('tp:', 320.0, ' fp:', 105.0, ' fn:', 1363.0)
+('tp:', 8344.0, ' fp:', 3264.0, ' fn:', 167.0)
+('tp:', 299.0, ' fp:', 319.0, ' fn:', 2158.0)
+f1 = 0.636
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'CHI2', 'Precent: ', 60)
+('Training: ', 'log_reg')
+Testing
+('tp:', 322.0, ' fp:', 105.0, ' fn:', 1361.0)
+('tp:', 8331.0, ' fp:', 3244.0, ' fn:', 180.0)
+('tp:', 309.0, ' fp:', 340.0, ' fn:', 2148.0)
+f1 = 0.637
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'CHI2', 'Precent: ', 70)
+('Training: ', 'log_reg')
+Testing
+('tp:', 326.0, ' fp:', 107.0, ' fn:', 1357.0)
+('tp:', 8324.0, ' fp:', 3222.0, ' fn:', 187.0)
+('tp:', 318.0, ' fp:', 354.0, ' fn:', 2139.0)
+f1 = 0.639
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'CHI2', 'Precent: ', 80)
+('Training: ', 'log_reg')
+Testing
+('tp:', 327.0, ' fp:', 108.0, ' fn:', 1356.0)
+('tp:', 8317.0, ' fp:', 3212.0, ' fn:', 194.0)
+('tp:', 320.0, ' fp:', 367.0, ' fn:', 2137.0)
+f1 = 0.639
+wacc = 0.709
+tacc = 0.709
+('Extract_Features: ', 'CHI2', 'Precent: ', 90)
+('Training: ', 'log_reg')
+Testing
+('tp:', 326.0, ' fp:', 107.0, ' fn:', 1357.0)
+('tp:', 8313.0, ' fp:', 3206.0, ' fn:', 198.0)
+('tp:', 324.0, ' fp:', 375.0, ' fn:', 2133.0)
+f1 = 0.639
+wacc = 0.708
+tacc = 0.708
+('Extract_Features: ', 'CHI2', 'Precent: ', 100)
+('Training: ', 'log_reg')
+Testing
+('tp:', 329.0, ' fp:', 109.0, ' fn:', 1354.0)
+('tp:', 8312.0, ' fp:', 3198.0, ' fn:', 199.0)
+('tp:', 326.0, ' fp:', 377.0, ' fn:', 2131.0)
+f1 = 0.640
+wacc = 0.709
+tacc = 0.709
+============================================================
+
+('acc', 0.7077701367480832)
+('f1', 0.6368612479245781)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.7077701367480832)
+('data', '3-unbalanced')
+('feature_precentage', 10)
+
+('acc', 0.70658445972650374)
+('f1', 0.63458989492285622)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70658445972650386)
+('data', '3-unbalanced')
+('feature_precentage', 20)
+
+('acc', 0.7072168208046794)
+('f1', 0.63789167592856399)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70721682080467951)
+('data', '3-unbalanced')
+('feature_precentage', 30)
+
+('acc', 0.70745395620899543)
+('f1', 0.63795950574012061)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70745395620899532)
+('data', '3-unbalanced')
+('feature_precentage', 40)
+
+('acc', 0.70792822701762703)
+('f1', 0.6384712353619949)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70792822701762703)
+('data', '3-unbalanced')
+('feature_precentage', 50)
+
+('acc', 0.70840249782625875)
+('f1', 0.63912375475513084)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70840249782625875)
+('data', '3-unbalanced')
+('feature_precentage', 60)
+
+('acc', 0.70871867836534652)
+('f1', 0.63961266342250878)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70871867836534663)
+('data', '3-unbalanced')
+('feature_precentage', 70)
+
+('acc', 0.70895581376966255)
+('f1', 0.63988899542441069)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70895581376966244)
+('data', '3-unbalanced')
+('feature_precentage', 80)
+
+('acc', 0.70903485890443441)
+('f1', 0.64029227538446865)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70903485890443441)
+('data', '3-unbalanced')
+('feature_precentage', 90)
+
+('acc', 0.70879772350011849)
+('f1', 0.63994880845111934)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l1_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.7087977235001186)
+('data', '3-unbalanced')
+('feature_precentage', 100)
+
+('acc', 0.70168366137064253)
+('f1', 0.62423588330575441)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70168366137064264)
+('data', '3-unbalanced')
+('feature_precentage', 10)
+
+('acc', 0.70263220298790607)
+('f1', 0.62601079250048564)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70263220298790607)
+('data', '3-unbalanced')
+('feature_precentage', 20)
+
+('acc', 0.70397597027902925)
+('f1', 0.62796654122585482)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70397597027902936)
+('data', '3-unbalanced')
+('feature_precentage', 30)
+
+('acc', 0.70429215081811714)
+('f1', 0.62902768227009498)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70429215081811714)
+('data', '3-unbalanced')
+('feature_precentage', 40)
+
+('acc', 0.70500355703106476)
+('f1', 0.63038634568209539)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70500355703106476)
+('data', '3-unbalanced')
+('feature_precentage', 50)
+
+('acc', 0.70563591810924031)
+('f1', 0.63186041862968334)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70563591810924042)
+('data', '3-unbalanced')
+('feature_precentage', 60)
+
+('acc', 0.70579400837878425)
+('f1', 0.63299006169394378)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70579400837878425)
+('data', '3-unbalanced')
+('feature_precentage', 70)
+
+('acc', 0.70856058809580269)
+('f1', 0.6386952805885765)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70856058809580269)
+('data', '3-unbalanced')
+('feature_precentage', 80)
+
+('acc', 0.70927199430875032)
+('f1', 0.63993078723882801)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70927199430875032)
+('data', '3-unbalanced')
+('feature_precentage', 90)
+
+('acc', 0.70879772350011849)
+('f1', 0.63994880845111934)
+('clf', 'log_reg')
+('feat_ext', 'SVM_l2_loss')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.7087977235001186)
+('data', '3-unbalanced')
+('feature_precentage', 100)
+
+('acc', 0.70563591810924042)
+('f1', 0.63659091655876943)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70563591810924042)
+('data', '3-unbalanced')
+('feature_precentage', 10)
+
+('acc', 0.70603114378310017)
+('f1', 0.63430372365722287)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70603114378310017)
+('data', '3-unbalanced')
+('feature_precentage', 20)
+
+('acc', 0.70531973757015254)
+('f1', 0.63017038793964808)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70531973757015254)
+('data', '3-unbalanced')
+('feature_precentage', 30)
+
+('acc', 0.70713777566990754)
+('f1', 0.63366150286100043)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70713777566990754)
+('data', '3-unbalanced')
+('feature_precentage', 40)
+
+('acc', 0.70745395620899543)
+('f1', 0.63475267317434036)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70745395620899532)
+('data', '3-unbalanced')
+('feature_precentage', 50)
+
+('acc', 0.70761204647853926)
+('f1', 0.63605735674618014)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70761204647853926)
+('data', '3-unbalanced')
+('feature_precentage', 60)
+
+('acc', 0.70792822701762703)
+('f1', 0.63707344527883791)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70792822701762703)
+('data', '3-unbalanced')
+('feature_precentage', 70)
+
+('acc', 0.70808631728717097)
+('f1', 0.63784952759108415)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70808631728717097)
+('data', '3-unbalanced')
+('feature_precentage', 80)
+
+('acc', 0.70792822701762703)
+('f1', 0.63849747371245835)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70792822701762703)
+('data', '3-unbalanced')
+('feature_precentage', 90)
+
+('acc', 0.70879772350011849)
+('f1', 0.63994880845111934)
+('clf', 'log_reg')
+('feat_ext', 'Anova')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.7087977235001186)
+('data', '3-unbalanced')
+('feature_precentage', 100)
+
+('acc', 0.71014149079124189)
+('f1', 0.64337640597203694)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.71014149079124178)
+('data', '3-unbalanced')
+('feature_precentage', 10)
+
+('acc', 0.70958817484783809)
+('f1', 0.64132891240571854)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70958817484783809)
+('data', '3-unbalanced')
+('feature_precentage', 20)
+
+('acc', 0.70824440755671492)
+('f1', 0.63985387666516735)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70824440755671492)
+('data', '3-unbalanced')
+('feature_precentage', 30)
+
+('acc', 0.70832345269148689)
+('f1', 0.63979933730160121)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70832345269148689)
+('data', '3-unbalanced')
+('feature_precentage', 40)
+
+('acc', 0.70848154296103083)
+('f1', 0.63966215710755203)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70848154296103072)
+('data', '3-unbalanced')
+('feature_precentage', 50)
+
+('acc', 0.70863963323057466)
+('f1', 0.63997725274455819)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70863963323057466)
+('data', '3-unbalanced')
+('feature_precentage', 60)
+
+('acc', 0.70856058809580258)
+('f1', 0.63956862372618306)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70856058809580269)
+('data', '3-unbalanced')
+('feature_precentage', 70)
+
+('acc', 0.7087977235001186)
+('f1', 0.64011825731392591)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.7087977235001186)
+('data', '3-unbalanced')
+('feature_precentage', 80)
+
+('acc', 0.70903485890443441)
+('f1', 0.64028823647227562)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70903485890443441)
+('data', '3-unbalanced')
+('feature_precentage', 90)
+
+('acc', 0.70879772350011849)
+('f1', 0.63994880845111934)
+('clf', 'log_reg')
+('feat_ext', 'Log_Reg')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.7087977235001186)
+('data', '3-unbalanced')
+('feature_precentage', 100)
+
+('acc', 0.70531973757015265)
+('f1', 0.63476756191362382)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70531973757015254)
+('data', '3-unbalanced')
+('feature_precentage', 10)
+
+('acc', 0.70492451189629279)
+('f1', 0.63158797249602783)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70492451189629279)
+('data', '3-unbalanced')
+('feature_precentage', 20)
+
+('acc', 0.70634732432218805)
+('f1', 0.63248629896633701)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70634732432218794)
+('data', '3-unbalanced')
+('feature_precentage', 30)
+
+('acc', 0.70769109161331112)
+('f1', 0.63396044615197122)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70769109161331123)
+('data', '3-unbalanced')
+('feature_precentage', 40)
+
+('acc', 0.70848154296103083)
+('f1', 0.63618356354340155)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70848154296103072)
+('data', '3-unbalanced')
+('feature_precentage', 50)
+
+('acc', 0.70840249782625875)
+('f1', 0.63731705055984222)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70840249782625875)
+('data', '3-unbalanced')
+('feature_precentage', 60)
+
+('acc', 0.70887676863489057)
+('f1', 0.6388753878169281)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70887676863489057)
+('data', '3-unbalanced')
+('feature_precentage', 70)
+
+('acc', 0.70856058809580269)
+('f1', 0.63902476633628313)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70856058809580269)
+('data', '3-unbalanced')
+('feature_precentage', 80)
+
+('acc', 0.70848154296103072)
+('f1', 0.63928992424403452)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.70848154296103072)
+('data', '3-unbalanced')
+('feature_precentage', 90)
+
+('acc', 0.70879772350011849)
+('f1', 0.63994880845111934)
+('clf', 'log_reg')
+('feat_ext', 'CHI2')
+('feat_generator', 'tfidf_ng3')
+('tacc', 0.7087977235001186)
+('data', '3-unbalanced')
+('feature_precentage', 100)
