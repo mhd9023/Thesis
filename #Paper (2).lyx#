@@ -2,15 +2,15 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass IEEEtran
+\textclass article
 \begin_preamble
 
  \usepackage{multicol}
 \date{}
-\usepackage{caption}
 \end_preamble
 \use_default_options true
 \begin_modules
+theorems-ams
 eqs-within-sections
 figs-within-sections
 \end_modules
@@ -80,11 +80,107 @@ figs-within-sections
 \begin_body
 
 \begin_layout Title
-A Deeper look into LABR (Large Scale Arabic Book Reviews Dataset )
+
+\series bold
+Social Media Analytics Technical Report 
 \end_layout
 
-\begin_layout Author
-Mahmoud Nabil, Mohammed Aly, Amir Atyia
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+center 
+\backslash
+textbf{Mahmoud Nabil}
+\backslash
+
+\backslash
+Computer Engineering 
+\backslash
+
+\backslash
+Cairo University
+\backslash
+
+\backslash
+Giza,Egypt
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+center 
+\backslash
+textbf{Mohamed Aly}
+\backslash
+
+\backslash
+Computer Engineering 
+\backslash
+
+\backslash
+Cairo University
+\backslash
+
+\backslash
+Giza,Egypt
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+center 
+\backslash
+textbf{Amir Atiya}
+\backslash
+
+\backslash
+Computer Engineering 
+\backslash
+
+\backslash
+Cairo University
+\backslash
+
+\backslash
+Giza,Egypt
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Abstract
@@ -92,6 +188,8 @@ Opinions on the Internet have a great influence on our own decisions when
  we plan to buy a product, travel abroad or even read a book.
  This is because these activities consume our worthy resources in terms
  of time and money.
+ This calls for tools to mine social data streams and extract useful information
+ out of it.
  In this paper we extend the work done in 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -101,10 +199,13 @@ key "alyatyia"
 
  by developing a comprehensive simulations and analysis on LABR (Large Scale
  Arabic Book Reviews Dataset).
- In particular, we perform here an extended survey of the different classifiers
- typically used for the sentiment polarity classification problem.
- In addition we explore the effect of using feature selection, as well as
- more sophisticated classifiers not generally used in NLP tasks.
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -119,7 +220,16 @@ Opinion mining is gaining a large attention nowadays.
  other people's sentiments towards these entities.
  Also the last decade witnessed an explosion in the number of social media
  platforms and the number of people using them.
- 
+ The most notable examples are Facebook, Twitter, and YouTube, where people
+ can post their comments, videos, and opinions about a wide variety of topics.
+ The power of social media was most visible in the revolutions of the so-called
+ Arab Spring.
+ Protesters in Tunisia, Egypt, Yemen, Syria, and Libya used social media
+ to their advantage to organize protests and share information and evade
+ the regimes' crackdown.
+ This also sparked an interest in social media analytics, the goal of which
+ has been the analysis of these data feeds on social media websites, and
+ the organization and extraction of useful information.
 \end_layout
 
 \begin_layout Standard
@@ -178,13 +288,20 @@ target "http://en.wikipedia.org/wiki/Languages_used_on_the_Internet"
 \end_inset
 
 .
- Another reason is the complexities of the Arabic language and different
- Arabic dialects exists in each Arab counry beside different Arabic dialects
- exist in the same country.
+ We capitalize on our expertise in machine learning, and our knowledge of
+ the Arabic language (together with the countrywide resources on the Arabic
+ language).
+ This latter gives us a competitive advantage over other data mining companies
+ abroad.
+ Arabic language NLP products are in high demand because of the large consumer
+ base of Arabic countries, and their large share of internet usage.
+ The other outcome of this project is to train a teaching assistant.
+ This would be one more step towards building an Arabic language NLP expertise
+ base in the country.
 \end_layout
 
-\begin_layout Quotation
-The contributions in this paper can be summarized as:
+\begin_layout Standard
+The contributions in this milestone can be summarized as:
 \end_layout
 
 \begin_layout Enumerate
@@ -208,6 +325,10 @@ An investigation into the effectiveness of some feature selection techniques
 Application of some other sophisticated classifiers that were never or rarely
  used in natural language processing research.
  
+\end_layout
+
+\begin_layout Enumerate
+Collection of an extensive data set from Twitter.
 \end_layout
 
 \begin_layout Section
@@ -311,7 +432,7 @@ Language
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -333,7 +454,7 @@ Features
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -364,7 +485,7 @@ English
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1636,7 +1757,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename 3 gram results/statistics.png
-	scale 20
+	scale 31
 
 \end_inset
 
@@ -1676,7 +1797,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename 3 gram results/Features_Statistics.png
-	scale 20
+	scale 31
 
 \end_inset
 
@@ -1755,7 +1876,7 @@ scalebox{0.65}{
 <cell multicolumn="2" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1773,7 +1894,7 @@ Balanced
 <cell multicolumn="2" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1782,7 +1903,7 @@ Balanced
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1800,7 +1921,7 @@ UnBalanced
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1809,7 +1930,7 @@ UnBalanced
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1829,7 +1950,7 @@ UnBalanced
 <cell multicolumn="2" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1968,7 +2089,7 @@ Train Set
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2042,7 +2163,7 @@ Test Set
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2143,7 +2264,7 @@ unigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2152,7 +2273,7 @@ unigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2170,7 +2291,7 @@ unigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2179,7 +2300,7 @@ unigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2190,7 +2311,7 @@ unigrams
 <cell multirow="4" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2217,7 +2338,7 @@ unigrams+bigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2226,7 +2347,7 @@ unigrams+bigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2244,7 +2365,7 @@ unigrams+bigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2253,7 +2374,7 @@ unigrams+bigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2264,7 +2385,7 @@ unigrams+bigrams
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2291,7 +2412,7 @@ unigrams+bigrams+trigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2300,7 +2421,7 @@ unigrams+bigrams+trigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2318,7 +2439,7 @@ unigrams+bigrams+trigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2327,7 +2448,7 @@ unigrams+bigrams+trigrams
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2497,10 +2618,9 @@ reference "eq:2"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{multline}
-Tf\, Idf_{word,document}=log(1+Freq(word,document))\\
-*log(\frac{TotalDocuments}{TotalFreq(word)})\label{eq:tfidf}
-\end{multline}
+\begin{equation}
+Tf\, Idf_{word,document}=log(1+Frequency(word,document))*log(\frac{TotalDocuments}{TotalFrequency(word)})\label{eq:tfidf}
+\end{equation}
 
 \end_inset
 
@@ -2593,10 +2713,9 @@ features are independent binary variables that describe the input
  of the term in the bag of words model.
  the likelihood of a review given a class c is: 
 \begin_inset Formula 
-\begin{eqnarray*}
-p(class|\bar{X}) & = & \prod_{i=1}^{n}\mathbf{[}\: p(token_{i}|class)^{x_{i}}*\\
- &  & (1-p(token_{i}|class))^{1-x_{i}}\:\mathbf{]}
-\end{eqnarray*}
+\[
+p(class|\bar{X})=\prod_{i=1}^{n}[\: p(token_{i}|class)^{x_{i}}*(1-p(token_{i}|class))^{1-x_{i}}\:]
+\]
 
 \end_inset
 
@@ -2791,7 +2910,7 @@ Balanced
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2800,7 +2919,7 @@ Balanced
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2820,7 +2939,7 @@ Unbalanced
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2829,7 +2948,7 @@ Unbalanced
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2840,7 +2959,7 @@ Unbalanced
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2849,7 +2968,7 @@ Unbalanced
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3008,7 +3127,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3162,7 +3281,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3320,7 +3439,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3478,7 +3597,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3634,7 +3753,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3792,7 +3911,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3958,7 +4077,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -4114,7 +4233,7 @@ No
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5333,7 +5452,7 @@ Features Number
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5342,7 +5461,7 @@ Features Number
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5353,7 +5472,7 @@ Features Number
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5362,7 +5481,7 @@ Features Number
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5455,7 +5574,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5464,7 +5583,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5473,7 +5592,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5482,7 +5601,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5491,7 +5610,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5551,7 +5670,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5560,7 +5679,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5569,7 +5688,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5578,7 +5697,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5587,7 +5706,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5647,7 +5766,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5656,7 +5775,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5665,7 +5784,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5674,7 +5793,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5683,7 +5802,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5743,7 +5862,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5752,7 +5871,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5761,7 +5880,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5770,7 +5889,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5779,7 +5898,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5839,7 +5958,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5848,7 +5967,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5857,7 +5976,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5866,7 +5985,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5875,7 +5994,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5935,7 +6054,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5944,7 +6063,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5953,7 +6072,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5962,7 +6081,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -5971,7 +6090,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6031,7 +6150,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6040,7 +6159,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6049,7 +6168,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6058,7 +6177,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6067,7 +6186,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6127,7 +6246,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6136,7 +6255,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6145,7 +6264,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6154,7 +6273,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6163,7 +6282,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6223,7 +6342,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6232,7 +6351,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6241,7 +6360,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6250,7 +6369,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6259,7 +6378,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6319,7 +6438,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6328,7 +6447,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6337,7 +6456,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6346,7 +6465,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6355,7 +6474,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6415,7 +6534,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6424,7 +6543,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6433,7 +6552,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6442,7 +6561,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6451,7 +6570,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6511,7 +6630,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6520,7 +6639,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6529,7 +6648,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6538,7 +6657,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6547,7 +6666,7 @@ Yes
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout 
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -6622,7 +6741,7 @@ Conclusion and Future Work
 \end_layout
 
 \begin_layout Standard
-In this work we discussed some experiments based on LABR data set by 
+In this report we discussed some experiments based on LABR data set by 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "alyatyia"
@@ -6636,15 +6755,25 @@ key "alyatyia"
 \end_layout
 
 \begin_layout Enumerate
+Manually tagging the data set by using Amazon Mechanical Turk service.
+\end_layout
+
+\begin_layout Enumerate
+Developing some topic extraction techniques to extract the most important
+ topics for a given set of tweets.
+\end_layout
+
+\begin_layout Enumerate
+Developing an algorithm for subjectivity and sentiment analysis for a given
+ set of tweets.
+\end_layout
+
+\begin_layout Enumerate
 Extracting Arabic sentiment lexicon and explore its potential.
 \end_layout
 
 \begin_layout Enumerate
 Exploring using Arabic-specific and more powerful specially tailored features.
-\end_layout
-
-\begin_layout Enumerate
-Trying some features reductions techniques such as SVD and PCA.
 \end_layout
 
 \begin_layout Standard
