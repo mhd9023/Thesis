@@ -1653,7 +1653,7 @@ LABR Data Set
 \end_layout
 
 \begin_layout Standard
-We downloaded and prepared an extentive amount of Arabic book reviews data
+We downloaded and prepared an extensive amount of Arabic book reviews data
  from the goodreads 
 \begin_inset Foot
 status collapsed
@@ -2658,7 +2658,7 @@ TotalAccuracy=\frac{Total\, number\, of\, true\, predicted\, reviews}{Total\, nu
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-Weighted\, F1=\frac{1}{N}*\sum_{i=1}^{i=N}\, F1(tag(i))\label{eq:2}
+Average\, F1=\frac{1}{N}*\sum_{i=1}^{i=N}\, F1(tag(i))\label{eq:2}
 \end{equation}
 
 \end_inset
