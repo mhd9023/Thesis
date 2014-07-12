@@ -1899,7 +1899,7 @@ center
 
 
 \begin_inset Graphics
-	filename paper_plots/reviews_statistics.png
+	filename reviews_statistics.png
 	scale 69
 
 \end_inset
@@ -1982,7 +1982,7 @@ center
 
 
 \begin_inset Graphics
-	filename paper_plots/users.png
+	filename users.png
 	scale 68
 
 \end_inset
@@ -2115,7 +2115,7 @@ center
 
 
 \begin_inset Graphics
-	filename paper_plots/tokens.png
+	filename tokens.png
 	scale 69
 
 \end_inset
@@ -2361,7 +2361,7 @@ scalebox{0.65}{
 
 
 \begin_inset Graphics
-	filename paper_plots/reviews.png
+	filename twitter/reviews.png
 	scale 110
 
 \end_inset
@@ -2415,7 +2415,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename paper_plots/statistics.png
+	filename statistics.png
 	scale 20
 
 \end_inset
@@ -2455,7 +2455,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename paper_plots/Features_Statistics.png
+	filename Features_Statistics.png
 	scale 20
 
 \end_inset
@@ -5089,11 +5089,11 @@ In this work we presented LABR dataset the largest Arabic sentiment analysis
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename paper_plots/lexicon.png
+	filename lexicon.png
 	width 100col%
 
 \end_inset
