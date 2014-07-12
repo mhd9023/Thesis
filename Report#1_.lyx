@@ -2837,7 +2837,7 @@ Perceptron:
 It is a simple feed-forward single layer linear neural network with a unit
  step function as an activation function.
  It uses an iterative algorithm for training the weights, but that algorithm
- does not take into account the margin..
+ does not take into account the margin.
 \end_layout
 
 \begin_layout Enumerate
@@ -4640,7 +4640,7 @@ name "fig:Experiment-3:-Feature"
 placement t
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -4745,7 +4745,7 @@ scalebox{0.65}{
 
 
 \begin_inset Graphics
-	filename 22-4/relief_validation.png
+	filename 22-4/svm_l1_validation.png
 	width 30page%
 	height 20pheight%
 

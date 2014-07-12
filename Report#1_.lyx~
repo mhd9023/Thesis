@@ -2762,7 +2762,7 @@ Linear SVM is a classifier that partitions the data using the linear formula
 Passive Aggressive:
 \series default
  It is an online learning model that uses a hinge-loss function together
- with an aggressiveness parameter C, in order to achieve a postive margin
+ with an aggressiveness parameter C, in order to achieve a positive margin
  high confidence classifier.
  The algorithm is described in details in 
 \begin_inset CommandInset citation
@@ -2837,7 +2837,7 @@ Perceptron:
 It is a simple feed-forward single layer linear neural network with a unit
  step function as an activation function.
  It uses an iterative algorithm for training the weights, but that algorithm
- does not take into account the margin..
+ does not take into account the margin.
 \end_layout
 
 \begin_layout Enumerate
